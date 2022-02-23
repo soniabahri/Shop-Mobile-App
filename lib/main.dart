@@ -15,9 +15,7 @@ class ShopApp extends StatelessWidget {
           backgroundColor: Colors.deepOrange,
           title: const Text('welcome to your App'),
         ),
-        body: const Center(
-          child: Text('Let\'s Start Shopping !'),
-        ),
+        body: const Center(),
       ),
     );
   }
