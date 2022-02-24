@@ -13,7 +13,7 @@ class ShopApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.deepOrange,
-          title: const Text('welcome to your App'),
+          title: const Text('Shopping Time !'),
         ),
         body: const Center(),
       ),
