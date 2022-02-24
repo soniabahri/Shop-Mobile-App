@@ -1,10 +1,7 @@
-import 'dart:html';
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
-  runApp(ShopApp());
+  runApp(const ShopApp());
 }
 
 class ShopApp extends StatelessWidget {
@@ -22,11 +19,12 @@ class ShopApp extends StatelessWidget {
         body: Container(
           color: const Color.fromRGBO(230, 230, 230, 99.9),
           child: Column(
-            children: const [
-              Text(
+            children: [
+              const Text(
                 'Welcome to your Shopping App',
                 textAlign: TextAlign.center,
               ),
+              Image.asset("assets/images/shopping-online.png"),
             ],
           ),
         ),
