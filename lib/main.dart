@@ -58,8 +58,9 @@ class MainPage extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: const Color.fromRGBO(148, 118, 163, 99.9),
           title: const Text(
-            "Cake",
+            "Cakeee",
             textAlign: TextAlign.center,
+            
           ),
         ),
         body: const Text("Testing !"),
