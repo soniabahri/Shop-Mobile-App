@@ -63,7 +63,7 @@ class MainPage extends StatelessWidget {
             
           ),
         ),
-        body: const Text("Testing Timeee"),
+        body: const Text("Testing Time"),
       ),
     );
   }
