@@ -32,10 +32,11 @@ class Body extends StatelessWidget {
             child: GridView.builder(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2, childAspectRatio: 0.75),
-              itemBuilder: (context, index) => ItemCard(
-                product: Productions[0],
-                press: press,
-              ),
+              itemBuilder: (context, index) {
+                return ItemCard(
+                  product: Productions[0],
+                );
+              },
             ),
           ),
         ),
@@ -46,11 +47,11 @@ class Body extends StatelessWidget {
 
 class ItemCard extends StatelessWidget {
   final Product product;
-  final Function press;
+  //final Function press;
   const ItemCard({
     Key? key,
     required this.product,
-    required this.press,
+    //required this.press,
   }) : super(key: key);
 
   @override
