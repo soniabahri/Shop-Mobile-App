@@ -30,7 +30,7 @@ class Body extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefalutPaddin),
             child: GridView.builder(
-              itemCount: Productions.length * 2,
+              itemCount: Productions.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   mainAxisSpacing: kDefalutPaddin,
