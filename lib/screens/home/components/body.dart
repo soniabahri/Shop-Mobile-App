@@ -18,7 +18,7 @@ class Body extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: kDefalutPaddin),
           child: Text(
-            "Women & Men",
+            "Women & Men :",
             style: Theme.of(context)
                 .textTheme
                 .headline5
@@ -81,7 +81,7 @@ class ItemCard extends StatelessWidget {
           ),
         ),
         const Text(
-          "\$234",
+          "$910",
           style: const TextStyle(fontWeight: FontWeight.bold),
         )
       ],
