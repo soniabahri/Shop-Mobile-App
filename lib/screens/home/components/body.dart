@@ -81,7 +81,7 @@ class ItemCard extends StatelessWidget {
           ),
         ),
         const Text(
-          "$910",
+          "122$",
           style: const TextStyle(fontWeight: FontWeight.bold),
         )
       ],
