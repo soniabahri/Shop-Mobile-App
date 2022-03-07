@@ -8,7 +8,7 @@ class Categories extends StatefulWidget {
 }
 
 class _CategoriesState extends State<Categories> {
-  List<String> categories = ["Shoes", "Dresses", "Jeans", "Skirts"];
+  List<String> categories = ["Shoe", "Dress", "Parfum", "Jean"];
   int selectedItem = 0;
   @override
   Widget build(BuildContext context) {
