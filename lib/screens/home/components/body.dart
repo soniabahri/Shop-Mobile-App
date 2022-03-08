@@ -81,7 +81,7 @@ class ItemCard extends StatelessWidget {
           ),
         ),
         const Text(
-          "100 TND",
+          "100 TND / 33 Euro",
           style: const TextStyle(fontWeight: FontWeight.bold),
         )
       ],
