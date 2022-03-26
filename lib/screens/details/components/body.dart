@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shop_app/constants.dart';
 import 'package:shop_app/screens/details/components/product_title_with_image.dart';
 
 import '../../../models/Product.dart';
 import 'ColorandSize.dart';
 import 'cart_counter.dart';
+import 'counter_with_love_button.dart';
 import 'description.dart';
 class Body extends StatelessWidget {
   final Product product ;
@@ -31,14 +33,26 @@ class Body extends StatelessWidget {
                     children: <Widget>[
                       ColorandSize(product: product),
                       description(product: product),
-                      Row(
-                        children: [
-                          CartCounter(),
-                          Container(height: 32,width: 32,decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(13.5),
-                            color: Color(0xFFFF6464)
-                          ),)
-                        ],
+                      //CounterwithLoveButton(),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: kDefalutPaddin),
+                        child: Row(
+                          children: <Widget>[
+
+                            Expanded(child:
+                            SizedBox(height: 50,child: FlatButton(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius:BorderRadius.circular(18) ),
+                              color: product.color,
+                              onPressed: (){},
+                            child: Text("Visit now".toUpperCase(),style: TextStyle(
+                                fontSize: 17,
+                                fontWeight: FontWeight.bold,
+                              color: Colors.grey
+                            ),),)
+                            ),)
+                          ],
+                        ),
                       )
                     ],
                   ),
@@ -51,6 +65,8 @@ class Body extends StatelessWidget {
     );
   }
 }
+
+
 class ColorDot extends StatelessWidget {
   final Color color;
   final bool isSelected ;
