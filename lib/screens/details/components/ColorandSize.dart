@@ -35,7 +35,7 @@ class ColorandSize extends StatelessWidget {
             child:RichText(text: TextSpan (
                 style: TextStyle( color: kTextLightColor),
                 children: [
-                  const TextSpan( text: "Size : \n" , style: TextStyle(color: Colors.black)),
+                  const TextSpan( text: "Size :\n" , style: TextStyle(color: Colors.black)),
                   TextSpan(text: '${product.size}', style: Theme.of(context).textTheme.headline5?.copyWith(fontWeight: FontWeight.bold)),
                 ]
             )))
