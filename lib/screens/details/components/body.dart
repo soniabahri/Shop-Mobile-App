@@ -42,7 +42,7 @@ class Body extends StatelessWidget {
                             Expanded(child:
                             SizedBox(height: 50,child: FlatButton(
                               shape: RoundedRectangleBorder(
-                                  borderRadius:BorderRadius.circular(18) ),
+                                  borderRadius:BorderRadius.circular(19) ),
                               color: product.color,
                               onPressed: (){},
                             child: Text("Visit now".toUpperCase(),style: TextStyle(
