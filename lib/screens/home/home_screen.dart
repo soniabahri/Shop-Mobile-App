@@ -21,18 +21,18 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       elevation: 0,
       leading: IconButton(
-        icon: SvgPicture.asset('assets/icons/back.svg'),
+        icon: const Icon(Icons.arrow_back,color: Colors.black,),
         onPressed: () {},
       ),
       actions: <Widget>[
         IconButton(
           onPressed: () {},
-          icon: SvgPicture.asset('assets/icons/search.svg'),
+          icon: const Icon(Icons.search,color: Colors.black,),
           color: KTextColor,
         ),
         IconButton(
           onPressed: () {},
-          icon: SvgPicture.asset('assets/icons/cart.svg'),
+          icon: const Icon(Icons.shopping_cart,color: Colors.black,),
           color: KTextColor,
         ),
         const SizedBox(

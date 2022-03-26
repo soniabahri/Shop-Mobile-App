@@ -22,12 +22,12 @@ class DetailScreen extends StatelessWidget {
     return AppBar(
       backgroundColor: product.color,
       elevation: 0,
-      leading: IconButton(icon: SvgPicture.asset('assets/icons/back.svg',color: Colors.black,),onPressed: () => Navigator.pop(context),),
-      actions: <Widget> [IconButton(icon : SvgPicture.asset('assets/icons/search.svg',color: Colors.black,),
+      leading: IconButton(icon: const Icon(Icons.arrow_back,color: Colors.black,),onPressed: () => Navigator.pop(context),),
+      actions: <Widget> [IconButton(icon : const Icon(Icons.search,color: Colors.black,),
       onPressed: () {} ),
-        IconButton(icon : SvgPicture.asset('assets/icons/cart.svg',color: Colors.black,),
+        IconButton(icon : const Icon(Icons.shopping_cart,color: Colors.black,),
           onPressed: () {} ,),
-      SizedBox( width: kDefalutPaddin / 2 )
+      const SizedBox( width: kDefalutPaddin / 2 )
       ],
 
     );

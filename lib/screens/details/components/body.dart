@@ -3,6 +3,9 @@ import 'package:shop_app/constants.dart';
 import 'package:shop_app/screens/details/components/product_title_with_image.dart';
 
 import '../../../models/Product.dart';
+import 'ColorandSize.dart';
+import 'cart_counter.dart';
+import 'description.dart';
 class Body extends StatelessWidget {
   final Product product ;
   const Body({Key? key, required this.product}) : super(key: key);
@@ -26,21 +29,15 @@ class Body extends StatelessWidget {
                   topRight: Radius.circular(24),),),
                   child: Column (
                     children: <Widget>[
+                      ColorandSize(product: product),
+                      description(product: product),
                       Row(
-                        children: <Widget>[
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-
-                              Text("color : \n",),
-                              Row(
-                                children: <Widget>[
-                                  ColorDot(color: Colors.black,isSelected: true,),
-                                  ColorDot(color: Colors.red),
-                                  ColorDot(color: Colors.teal),],
-                              )
-                            ],
-                          )
+                        children: [
+                          CartCounter(),
+                          Container(height: 32,width: 32,decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(13.5),
+                            color: Color(0xFFFF6464)
+                          ),)
                         ],
                       )
                     ],
@@ -54,7 +51,6 @@ class Body extends StatelessWidget {
     );
   }
 }
-
 class ColorDot extends StatelessWidget {
   final Color color;
   final bool isSelected ;
