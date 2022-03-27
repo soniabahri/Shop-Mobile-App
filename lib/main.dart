@@ -13,7 +13,7 @@ class ShopApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'MyShop',
+      title: 'My Shop',
       theme: ThemeData(
         textTheme: Theme.of(context).textTheme.apply(bodyColor: KTextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
