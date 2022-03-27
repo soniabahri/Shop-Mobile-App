@@ -32,7 +32,9 @@ class Body extends StatelessWidget {
                   child: Column (
                     children: <Widget>[
                       ColorandSize(product: product),
+                      SizedBox(height: kDefalutPaddin /2,),
                       description(product: product),
+                      SizedBox(height: kDefalutPaddin /2,),
                       //CounterwithLoveButton(),
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: kDefalutPaddin),
