@@ -47,7 +47,11 @@ class Body extends StatelessWidget {
                                   borderRadius:BorderRadius.circular(19) ),
                               color: Colors.black,
                               onPressed: (){},
+<<<<<<< HEAD
                             child: Text("Visit now !".toUpperCase(),style: const TextStyle(
+=======
+                            child: Text("Visit now".toUpperCase(),style: const TextStyle(
+>>>>>>> 141b56ad44b4e7f60a130701c330b815d8bb3abc
                                 fontSize: 17,
                                 fontWeight: FontWeight.bold,
                               color: Colors.grey
