@@ -32,9 +32,9 @@ class Body extends StatelessWidget {
                   child: Column (
                     children: <Widget>[
                       ColorandSize(product: product),
-                      SizedBox(height: kDefalutPaddin /2,),
+                      const SizedBox(height: kDefalutPaddin /2,),
                       description(product: product),
-                      SizedBox(height: kDefalutPaddin /2,),
+                      const SizedBox(height: kDefalutPaddin /2,),
                       //CounterwithLoveButton(),
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: kDefalutPaddin),
@@ -45,9 +45,9 @@ class Body extends StatelessWidget {
                             SizedBox(height: 50,child: FlatButton(
                               shape: RoundedRectangleBorder(
                                   borderRadius:BorderRadius.circular(19) ),
-                              color: product.color,
+                              color: Colors.black,
                               onPressed: (){},
-                            child: Text("Visit now !".toUpperCase(),style: TextStyle(
+                            child: Text("Visit now !".toUpperCase(),style: const TextStyle(
                                 fontSize: 17,
                                 fontWeight: FontWeight.bold,
                               color: Colors.grey

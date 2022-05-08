@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -18,21 +20,19 @@ class ProductTitleWithImage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[const Text("The product is : ",style: TextStyle(color: Colors.grey,fontSize: 20),),
-          Text(product.title, style: Theme.of(context).textTheme.headline4?.copyWith(color: Colors.grey,fontWeight: FontWeight.bold),),
-          SizedBox(height: kDefalutPaddin,)
+          Text(utf8.decode(product.title.codeUnits), style: Theme.of(context).textTheme.headline4?.copyWith(color: Colors.grey,fontWeight: FontWeight.bold),),
+          const SizedBox(height: kDefalutPaddin,)
           ,Row( children: <Widget> [RichText(text: TextSpan(
             children: [
               const TextSpan(text: "Price : \n",style: TextStyle(color:Colors.grey,fontSize: 24)),
-              TextSpan(text: "\$${product.price}",style: const TextStyle(color:Colors.grey,fontSize: 26),)
+              TextSpan(text: product.price,style: TextStyle(color:Colors.grey,fontSize: 16),)
             ],
           ),),
-            SizedBox(width: kDefalutPaddin,),
+            const SizedBox(width: kDefalutPaddin,),
             Expanded(child:
             Hero(
-              tag: "${product.id}",
-              child: Image.asset(
-                product.image,
-                fit: BoxFit.fill,),
+              tag: product.id,
+              child: product.image,
             ),)
             ,],)
 

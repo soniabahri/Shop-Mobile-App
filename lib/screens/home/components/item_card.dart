@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
+import 'dart:convert';
 
+import 'package:flutter/material.dart';
 import '../../../constants.dart';
-import '../../../models/Product.dart';
 
 class ItemCard extends StatelessWidget {
-  final Product product;
+  final dynamic product;
   final Function()? press;
 
   ItemCard({
@@ -26,23 +26,24 @@ class ItemCard extends StatelessWidget {
               // height: 180,
               // width: 160,
               decoration: BoxDecoration(
-                color: product.color,
+                // color: product.color,
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Hero(
-              tag: "${product.id}"    ,
-              child: Image.asset(product.image)),
+              tag: "${product.id}" ,
+                child: product.image,
+              ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: kDefalutPaddin / 4),
             child: Text(
-              product.title,
+              utf8.decode(product.title.codeUnits),
               style: const TextStyle(color: kTextLightColor),
             ),
           ),
           Text(
-            "\$${product.price}",
+            "${product.price} Dt",
             style: const TextStyle(fontWeight: FontWeight.bold),
           )
         ],

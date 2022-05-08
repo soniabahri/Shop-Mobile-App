@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shop_app/constants.dart';
 import 'package:shop_app/screens/details/components/body.dart';
 
@@ -12,7 +11,7 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: product.color,
+      // backgroundColor: product.color,
       appBar: buildAppBar(context),
       body:Body(product: product,),
     );
@@ -20,7 +19,7 @@ class DetailScreen extends StatelessWidget {
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
-      backgroundColor: product.color,
+      // backgroundColor: product.color,
       elevation: 0,
       leading: IconButton(icon: const Icon(Icons.arrow_back,color: Colors.black,),onPressed: () => Navigator.pop(context),),
       actions: <Widget> [IconButton(icon : const Icon(Icons.search,color: Colors.black,),

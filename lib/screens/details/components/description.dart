@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:shop_app/constants.dart';
 import '../../../models/Product.dart';
@@ -13,8 +15,8 @@ class description extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: kDefalutPaddin),
-      child: Text(product.description,style: TextStyle(height: 1.5),),
+      padding: const EdgeInsets.symmetric(vertical: kDefalutPaddin),
+      child: Text(utf8.decode(product.description.codeUnits),style: const TextStyle(height: 1.5),),
     );
   }
 }
